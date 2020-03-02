@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>User details</h1>
+
+<form [formGroup]="userForm" style="margin-top:5px">
+
+  <mat-form-field class="form-style">
+    <input matInput placeholder="username" [attr.disabled]="true" formControlName="username" id="username"
+      autocomplete="off">
+
+  </mat-form-field>
+  <mat-form-field class="form-style">
+    <input matInput placeholder="firstName" [attr.disabled]="true" formControlName="firstName" id="firstName" autocomplete="off">
+
+  </mat-form-field>
+  <mat-form-field class="form-style">
+    <input matInput type="password" placeholder="password" [attr.disabled]="true" formControlName="password" id="password" autocomplete="off">
+
+  </mat-form-field>
+
+  <mat-form-field class="form-style">
+    <input matInput placeholder="lastName" [attr.disabled]="true" formControlName="lastName" id="lastName" autocomplete="off">
+
+  </mat-form-field>
+  <mat-form-field class="form-style">
+    <input matInput placeholder="address" [attr.disabled]="true" formControlName="address" id="address"
+      autocomplete="off">
+
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select matInput placeholder="role" formControlName="role" id="role">
+      <mat-option *ngFor="let roleOption of roleOptions" [value]="roleOption">
+        {{roleOption.name}}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="hasError('role', 'required')">Role important!</mat-error>
+  </mat-form-field>
+  <mat-form-field >
+    <input matInput [matDatepicker]="datepicker1" placeholder="dateOfBirth" formControlName="dateOfBirth" required>
+    <mat-datepicker-toggle matSuffix [for]="datepicker1"></mat-datepicker-toggle>
+    <mat-datepicker  #datepicker1></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field class="form-style">
+    <input matInput placeholder="salary" [attr.disabled]="true" formControlName="salary" id="salary" autocomplete="off">
+
+  </mat-form-field>
+  <button type="button" mat-button (click)="onSubmit()" [disabled]="!userForm.valid">
+    <mat-icon>send</mat-icon><span>Save </span>
+  </button>
+</form>

@@ -1,0 +1,51 @@
+.form-select-style {
+  margin-bottom: 50px;
+}
+
+.form-style {
+  width: 50%;
+}
+
+.file-select-button, .file-name {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: yellow !important;
+}
+
+/* input color class */
+::ng-deep input.mat-input-element {
+  color: black;
+}
+
+/* Change label color on focused */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: black !important;
+}
+
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background-color: yellow !important;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.disable-text-attachment{
+  color: rgba(0,0,0,.38); /*background color and opacity together*/
+}
+.disable-span {
+  color: #E6E6E6;
+  cursor: not-allowed;
+}
+

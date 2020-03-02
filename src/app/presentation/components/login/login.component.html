@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (submit)="login()">
+      <p>
+        <mat-form-field>
+          <input formControlName="username" type="text" matInput placeholder="Korisničko ime" id="username">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input formControlName="password" type="password" matInput placeholder="Korisnička lozinka" id="password">
+        </mat-form-field>
+      </p>
+      <div class="button">
+        <button [disabled]="isLoging" type="submit" mat-button class="btn btn-primary">
+          <mat-spinner *ngIf="isLoging" diameter="25" strokeWidth="5"></mat-spinner>
+          <div *ngIf="!isLoging">
+            Prijava
+          </div>
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

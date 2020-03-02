@@ -1,0 +1,8 @@
+<mat-toolbar style="background: #2c2c2c;">  
+  <span class="fill-remaining-space">
+    <button mat-icon-button *ngIf="isMobile" (click)="sidenav.toggle();">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </span>
+  <span class="fill-remaining-space">{{componentTitle}}</span>
+</mat-toolbar>
