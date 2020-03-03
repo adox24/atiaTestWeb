@@ -38,7 +38,7 @@
     <mat-datepicker  #datepicker1></mat-datepicker>
   </mat-form-field>
   <mat-form-field class="form-style">
-    <input matInput placeholder="salary" [attr.disabled]="true" formControlName="salary" id="salary" autocomplete="off">
+    <input matInput type="number" placeholder="salary" [attr.disabled]="true" formControlName="salary" id="salary" autocomplete="off">
 
   </mat-form-field>
   <button type="button" mat-button (click)="onSubmit()" [disabled]="!userForm.valid">
